@@ -46,7 +46,6 @@ void wasm_host_update();
 #else
   #include "host_wamr_header.h"
   #define EXPAND_PARAMS(...) , ##__VA_ARGS__
-  // #define HOST_FUNCTION(ret_type, name, params, ...) ret_type host_##name(wasm_exec_env_t exec_env EXPAND_PARAMS params) { __VA_ARGS__ };
   cvector_vector_type(NativeSymbol) null0_native_symbols = NULL;
 
   #define HOST_FUNCTION(ret_type, name, params, ...) \

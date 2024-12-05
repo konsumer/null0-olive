@@ -74,7 +74,9 @@ bool wasm_host_load_wasm (unsigned char* wasmBytes, uint32_t wasmBytesLen) {
   cart_keyUp = wasm_runtime_lookup_function(module_inst, "keyUp");
   cart_keyDown = wasm_runtime_lookup_function(module_inst, "keyDown");
 
-  // for some reason load mustbe called before main
+  null0_setup_graphics();
+
+  // for some reason load must be called before main
 
   if (cart_load != NULL) {
     if (!wasm_runtime_call_wasm(exec_env, cart_load, 0, NULL)) {

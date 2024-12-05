@@ -60,5 +60,5 @@ function(BUILD_AS_CART name)
 endfunction()
 
 
-BUILD_C_CART(runtests)
-BUILD_AS_CART(runtests)
+BUILD_C_CART(test1)
+

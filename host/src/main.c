@@ -15,6 +15,9 @@
 #define CVECTOR_LOGARITHMIC_GROWTH
 #include "cvector.h"
 
+#define OLIVEC_IMPLEMENTATION
+#include "olive.c"
+
 // filesystem utils (used by host)
 #include "fs.h"
 
@@ -49,6 +52,7 @@ int main(int argc, char *argv[]) {
   }
 
   // printf("loaded: %s\n", cartFilename);
+
 
   #ifdef EMSCRIPTEN
     emscripten_set_main_loop(wasm_host_update, 60, false);
